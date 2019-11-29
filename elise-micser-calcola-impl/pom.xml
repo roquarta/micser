@@ -1,0 +1,108 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>it.eng</groupId>
+    <artifactId>elise-micser-calcola</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>elise-micser-calcola-impl</artifactId>
+  
+	<packaging>jar</packaging>
+	<dependencies>
+		<dependency>
+			<groupId>it.eng</groupId>
+			<artifactId>${root.artifact.id}-api</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>it.eng</groupId>
+			<artifactId>${root.artifact.id}-eai</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.netflix.hystrix</groupId>
+			<artifactId>hystrix-javanica</artifactId>
+		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>it.ubi.services</groupId> -->
+		<!-- <artifactId>tracing-logger-jaeger-impl</artifactId> -->
+		<!-- <version>${tracing.version}</version> -->
+		<!-- </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.aspectj</groupId> -->
+		<!-- <artifactId>aspectjrt</artifactId> -->
+		<!-- </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.aspectj</groupId> -->
+		<!-- <artifactId>aspectjweaver</artifactId> -->
+		<!-- </dependency> -->
+	</dependencies>
+	<build>
+		<plugins>
+			<!-- <plugin> -->
+			<!-- <groupId>org.codehaus.mojo</groupId> -->
+			<!-- <artifactId>aspectj-maven-plugin</artifactId> -->
+			<!-- <dependencies> -->
+			<!-- <dependency> -->
+			<!-- <groupId>org.aspectj</groupId> -->
+			<!-- <artifactId>aspectjtools</artifactId> -->
+			<!-- <version>${aspectj.version}</version> -->
+			<!-- </dependency> -->
+			<!-- <dependency> -->
+			<!-- <groupId>org.aspectj</groupId> -->
+			<!-- <artifactId>aspectjrt</artifactId> -->
+			<!-- <version>${aspectj.version}</version> -->
+			<!-- </dependency> -->
+
+			<!-- </dependencies> -->
+			<!-- <configuration> -->
+			<!-- <complianceLevel>1.8</complianceLevel> -->
+			<!-- <source>1.8</source> -->
+			<!-- <target>1.8</target> -->
+			<!-- <aspectLibraries> -->
+			<!-- <aspectLibrary> -->
+			<!-- <groupId>it.ubi.services</groupId> -->
+			<!-- <artifactId>tracing-logger-jaeger-impl</artifactId> -->
+			<!-- </aspectLibrary> -->
+			<!-- </aspectLibraries> -->
+			<!-- </configuration> -->
+			<!-- <executions> -->
+			<!-- <execution> -->
+			<!-- <goals> -->
+			<!-- <goal>compile</goal> -->
+			<!-- <goal>test-compile</goal> -->
+			<!-- </goals> -->
+			<!-- </execution> -->
+			<!-- </executions> -->
+			<!-- </plugin> -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.target}</target>
+					<annotationProcessorPaths>
+						<path>
+							<groupId>org.mapstruct</groupId>
+							<artifactId>mapstruct-processor</artifactId>
+							<version>${org.mapstruct.version}</version>
+						</path>
+					</annotationProcessorPaths>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>compile</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+  
+</project>

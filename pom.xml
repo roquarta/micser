@@ -19,7 +19,7 @@
 		<tracing.version>1.0.0-SNAPSHOT</tracing.version>
 		<aspectj.version>1.8.10</aspectj.version>
 		<root.artifact.id>elise-micser-calcola</root.artifact.id>
-		<spring.boot.version>1.5.17.RELEASE</spring.boot.version>
+		<spring.boot.version>2.5.12</spring.boot.version>
 		<validation.version>2.0.1.Final</validation.version>
 		<datatype.jsr310.version>2.8.0</datatype.jsr310.version>
 		<hystrix.javanica.version>1.5.3</hystrix.javanica.version>
